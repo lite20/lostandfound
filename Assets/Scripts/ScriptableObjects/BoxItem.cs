@@ -6,11 +6,15 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/BoxItem", order = 1)]
 public class BoxItem : ScriptableObject
 {
-    public Sprite big_image;
-    public Sprite small_image;
+    public Sprite bigImage;
+    public Sprite smallImage;
+
+    public Sprite[] ownerCharacters;
+    public Sprite[] liarCharacters;
 
     public string description;
+    public string name;
 
     public DialogueGraph[] ownerGraphs;
-    public DialogueGraph[] lierGraphs;
+    public DialogueGraph[] liarGraphs;
 }

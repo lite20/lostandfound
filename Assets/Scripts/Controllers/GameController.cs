@@ -14,8 +14,14 @@ public class GameController : MonoBehaviour
     public BoxItem[] items;
 
     public ItemPanelController itemPanelController;
+    public DialogueController dialogueController;
+
+    public GameObject selectionPanel;
+    public GameObject interrogationPanel;
 
     public Sequence[] m_sequence = new Sequence[5];
+
+    private int m_roundIndex = 0;
 
     private List<int> GetRunItems(int numberOfItems) {
         List<int> runItems = new List<int>();
@@ -35,6 +41,10 @@ public class GameController : MonoBehaviour
     }
 
     public void Start() {
+        BuildRun();
+    }
+
+    private void BuildRun() {
         // get the 7 items for this run (5 for now)
         int[] m_runItems = GetRunItems(5).ToArray();
         
@@ -86,7 +96,48 @@ public class GameController : MonoBehaviour
             itemPanelController.AddItem(items[i]);
     }
 
+    // proceeds to the next round
     public void Proceed() {
+        m_roundIndex++;
         
+        dialogueController.RunGraph(GetSequenceGraph(m_roundIndex));
+        dialogueController.SetArt(GetCharacter(m_roundIndex));
+    }
+
+    // starts the game
+    public void Begin() {
+        m_roundIndex = 0;
+
+        dialogueController.RunGraph(GetSequenceGraph(m_roundIndex));
+        dialogueController.SetArt(GetCharacter(m_roundIndex));
+
+        selectionPanel.SetActive(false);
+        interrogationPanel.SetActive(true);
+    }
+
+    // gets a graph for the sequence item requested
+    private DialogueGraph GetSequenceGraph(int index) {
+        Sequence seq = m_sequence[index];
+
+        // get graph list
+        DialogueGraph[] graphs;
+        if (seq.isOwner) graphs = seq.item.ownerGraphs;
+        else graphs = seq.item.liarGraphs;
+
+        // pick one and return
+        return graphs[Random.Range(0, graphs.Length)];
+    }
+
+    // gets a person art for the sequence item requested
+    private Sprite GetCharacter(int index) {
+        Sequence seq = m_sequence[index];
+
+        // pick the character art list
+        Sprite[] characters;
+        if (seq.isOwner) characters = seq.item.ownerCharacters;
+        else characters = seq.item.liarCharacters;
+
+        // pick a character and return
+        return characters[Random.Range(0, characters.Length)];
     }
 }

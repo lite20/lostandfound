@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3105c2441645ea440aac9a4a253d8f73, type: 3}
   m_Name: Headphones
   m_EditorClassIdentifier: 
-  big_image: {fileID: 21300000, guid: 645053a3c2339b749861b1d04cf50eb3, type: 3}
-  small_image: {fileID: 21300000, guid: 87ce56969708dad4c89f5e4537a10c50, type: 3}
+  bigImage: {fileID: 21300000, guid: 645053a3c2339b749861b1d04cf50eb3, type: 3}
+  smallImage: {fileID: 21300000, guid: 87ce56969708dad4c89f5e4537a10c50, type: 3}
+  ownerCharacters: []
+  liarCharacters: []
   description: A well-built headphone with black and golden details. Looks comfortable.
+  name: Headphones
   ownerGraphs:
   - {fileID: 11400000, guid: 24112df7b6e78194a9c97741a24d5c5a, type: 2}
-  lierGraphs: []
+  liarGraphs: []

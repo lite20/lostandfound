@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3105c2441645ea440aac9a4a253d8f73, type: 3}
   m_Name: Wallet
   m_EditorClassIdentifier: 
+  bigImage: {fileID: 21300000, guid: 7ac2175c20555694a961b0b3faa48e24, type: 3}
+  smallImage: {fileID: 21300000, guid: 024bde85d1a60d34dba306a4ccd5a793, type: 3}
+  ownerCharacters: []
+  liarCharacters: []
   description: "A black leather wallet with a \u201CB\u201D engraved. It has at least
     $100 in it, along with a few gift cards but no ID."
-  small_image: {fileID: 21300000, guid: 024bde85d1a60d34dba306a4ccd5a793, type: 3}
-  big_image: {fileID: 21300000, guid: 7ac2175c20555694a961b0b3faa48e24, type: 3}
+  name: Wallet
   ownerGraphs:
   - {fileID: 11400000, guid: 1bd062a4dff8b7c4ba0191625e2b7a9c, type: 2}
-  lierGraphs: []
+  liarGraphs: []

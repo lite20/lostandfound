@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour
 {
@@ -10,9 +11,7 @@ public class DialogueController : MonoBehaviour
 
     public DialogueGraph m_graph;
 
-    public void Start() {
-        RunGraph(m_graph);
-    }
+    public Image characterImage;
 
     public void RunGraph(DialogueGraph graph) {
         m_graph = graph;
@@ -42,5 +41,9 @@ public class DialogueController : MonoBehaviour
         // set the response node next node
         dialoguePanel.Show(true);
         optionPanel.Show(false);
+    }
+
+    public void SetArt(Sprite character) {
+        characterImage.sprite = character;
     }
 }

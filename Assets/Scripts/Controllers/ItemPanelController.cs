@@ -26,7 +26,7 @@ public class ItemPanelController : MonoBehaviour
         GameObject go = Instantiate(itemPrefab, itemContainer.transform);
 
         // set the small icon
-        go.transform.GetChild(0).GetComponent<Image>().sprite = item.small_image;
+        go.transform.GetChild(0).GetComponent<Image>().sprite = item.smallImage;
 
         // set the on press action
         go.GetComponent<Button>().onClick.AddListener(() => Expand(item));
@@ -42,6 +42,6 @@ public class ItemPanelController : MonoBehaviour
         expandText.text = item.description;
 
         // update the art
-        expandImage.sprite = item.big_image;
+        expandImage.sprite = item.bigImage;
     }
 }
