@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2aba4a262570d4a9a431c72006ad25, type: 3}
+  m_Name: Wallet
+  m_EditorClassIdentifier: 
+  startingNode: 3
+  nodes:
+  - isDialogue: 1
+    options: []
+    dialogue: "Hello, I\u2019ve lost my wallet. Do you have it by any chance?"
+    nextNode: 1
+  - isDialogue: 0
+    options:
+    - optionText: 'Anything particular or unique about the wallet you lost? '
+      responseText: "You know\u2026 regular sized wallet. Made of leather. "
+      nextNode: 0
+    - optionText: 'Did you happen to have any money in it? '
+      responseText: "Actually I did. Don\u2019t trust credit cards."
+      nextNode: 0
+    - optionText: 'Do you have any piece of ID with you, by any chance? '
+      responseText: "No, sorry\u2026"
+      nextNode: 0
+    dialogue: 
+    nextNode: 2
+  - isDialogue: 0
+    options:
+    - optionText: "Did it have a \u201CB\u201D logo on it? "
+      responseText: "Yes, that\u2019s the one!"
+      nextNode: 0
+    - optionText: 'Anything else you can tell me about it? '
+      responseText: "I guess it had something engraved\u2026 the brand logo perhaps? "
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 1
+    options: []
+    dialogue: "Hello, I\u2019ve lost my wallet. Do you have it by any chance?"
+    nextNode: 0
