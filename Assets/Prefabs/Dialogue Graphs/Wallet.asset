@@ -12,17 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2aba4a262570d4a9a431c72006ad25, type: 3}
   m_Name: Wallet
   m_EditorClassIdentifier: 
-  startingNode: 3
+  startingNode: 2
   nodes:
-  - isDialogue: 1
-    options: []
-    dialogue: "Hello, I\u2019ve lost my wallet. Do you have it by any chance?"
-    nextNode: 1
   - isDialogue: 0
     options:
     - optionText: 'Anything particular or unique about the wallet you lost? '
       responseText: "You know\u2026 regular sized wallet. Made of leather. "
-      nextNode: 2
+      nextNode: 1
     - optionText: 'Did you happen to have any money in it? '
       responseText: "Actually I did. Don\u2019t trust credit cards."
       nextNode: 0
