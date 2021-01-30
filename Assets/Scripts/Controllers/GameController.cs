@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour
         // get the 7 items for this run (5 for now)
         int[] m_runItems = GetRunItems(5).ToArray();
         
-        // generate the first day's run
+        // the item indexes
         List<int> indexes = new List<int>(){ 0, 1, 2, 3 };
 
         // select the item that is duplicated
@@ -91,15 +91,19 @@ public class GameController : MonoBehaviour
         
         m_sequence[flipIndex].isOwner = false;
 
-        // TODO: place the first four items into the game
-        for (int i = 0; i < 4; i++)
-            itemPanelController.AddItem(items[i]);
+        // TODO: add in random order
+        for (int i = 0; i < 5; i++) {
+            // skip the duplicate
+            if (i == dLieIndex) continue;
+
+            itemPanelController.AddItem(m_sequence[i].item);
+        }
     }
 
     // proceeds to the next round
     public void Proceed() {
         m_roundIndex++;
-        
+
         dialogueController.RunGraph(GetSequenceGraph(m_roundIndex));
         dialogueController.SetArt(GetCharacter(m_roundIndex));
     }

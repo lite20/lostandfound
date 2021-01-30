@@ -19,8 +19,6 @@ public class DialogueController : MonoBehaviour
     }
 
     public void PresentNode(int nodeID) {
-        Debug.Log("Next node is: " + nodeID);
-        
         DialogueGraph.Node node = m_graph.nodes[nodeID];
 
         // show the appropriate panel
