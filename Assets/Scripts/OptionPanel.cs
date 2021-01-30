@@ -19,7 +19,7 @@ public class OptionPanel : MonoBehaviour
 
         // Create all new options
         foreach (DialogueGraph.Option optionNode in options) {
-            GameObject go = Instantiate(optionPrefab);
+            GameObject go = Instantiate(optionPrefab, panel.transform);
 
             // set the text
             go.GetComponent<UIOption>().buttonText.text = optionNode.optionText;
@@ -27,7 +27,7 @@ public class OptionPanel : MonoBehaviour
             // set the reference to the panel
             go.GetComponent<UIOption>().optionPanel = this;
 
-            // set hte response
+            // set the response
             go.GetComponent<UIOption>().response = optionNode.responseText;
 
             // set the next node

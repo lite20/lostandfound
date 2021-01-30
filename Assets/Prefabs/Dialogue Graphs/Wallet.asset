@@ -22,7 +22,7 @@ MonoBehaviour:
     options:
     - optionText: 'Anything particular or unique about the wallet you lost? '
       responseText: "You know\u2026 regular sized wallet. Made of leather. "
-      nextNode: 0
+      nextNode: 2
     - optionText: 'Did you happen to have any money in it? '
       responseText: "Actually I did. Don\u2019t trust credit cards."
       nextNode: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
       responseText: "No, sorry\u2026"
       nextNode: 0
     dialogue: 
-    nextNode: 2
+    nextNode: 0
   - isDialogue: 0
     options:
     - optionText: "Did it have a \u201CB\u201D logo on it? "
