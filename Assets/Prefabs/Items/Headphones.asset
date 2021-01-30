@@ -15,5 +15,6 @@ MonoBehaviour:
   big_image: {fileID: 21300000, guid: 645053a3c2339b749861b1d04cf50eb3, type: 3}
   small_image: {fileID: 21300000, guid: 87ce56969708dad4c89f5e4537a10c50, type: 3}
   description: A well-built headphone with black and golden details. Looks comfortable.
-  ownerGraphs: []
+  ownerGraphs:
+  - {fileID: 11400000, guid: 24112df7b6e78194a9c97741a24d5c5a, type: 2}
   lierGraphs: []

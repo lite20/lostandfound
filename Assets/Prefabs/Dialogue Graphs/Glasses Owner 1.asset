@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2aba4a262570d4a9a431c72006ad25, type: 3}
+  m_Name: Glasses Owner 1
+  m_EditorClassIdentifier: 
+  startingNode: 1
+  nodes:
+  - isDialogue: 0
+    options:
+    - optionText: 'Can you tell me more about the item? '
+      responseText: 'They are glasses, duh. '
+      nextNode: 0
+    - optionText: 'What kind of glasses? '
+      responseText: "The kind you wear in your face\u2026 seriously, do you have
+        them or not? "
+      nextNode: 0
+    - optionText: 'Do you mean sunglasses? '
+      responseText: 'YES. Tomato, tomatoh. Can I have them now please thanks? '
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 1
+    options: []
+    dialogue: Hey, you. I lost my glasses. Do you have them?
+    nextNode: 0

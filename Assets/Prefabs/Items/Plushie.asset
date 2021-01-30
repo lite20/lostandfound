@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3105c2441645ea440aac9a4a253d8f73, type: 3}
   m_Name: Plushie
   m_EditorClassIdentifier: 
+  big_image: {fileID: 21300000, guid: 8220b1eb0edf2b84fb3a0f1d6c106698, type: 3}
+  small_image: {fileID: 21300000, guid: 2236492aaeeaa074592893db19209280, type: 3}
   description: A bear-like plushie with a crescent moon symbol on its forehead. Looks
     clean and clearly well taken care of, perhaps brand new.
-  small_image: {fileID: 21300000, guid: 2236492aaeeaa074592893db19209280, type: 3}
-  big_image: {fileID: 21300000, guid: 8220b1eb0edf2b84fb3a0f1d6c106698, type: 3}
-  ownerGraphs:
-  - {fileID: 0}
+  ownerGraphs: []
   lierGraphs:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 6471583695136a04bbd0e1c94de91736, type: 2}

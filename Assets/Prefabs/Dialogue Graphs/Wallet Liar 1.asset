@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2aba4a262570d4a9a431c72006ad25, type: 3}
+  m_Name: Wallet Liar 1
+  m_EditorClassIdentifier: 
+  startingNode: 2
+  nodes:
+  - isDialogue: 0
+    options:
+    - optionText: 'Anything particular or unique about the wallet you lost? '
+      responseText: 'Nothing that really stands out. Well used, I guess. '
+      nextNode: 1
+    - optionText: 'Did you happen to have any money in it? '
+      responseText: "Yeah\u2026 I\u2019m not sure how much, though. "
+      nextNode: 0
+    - optionText: 'Do you have any piece of ID with you, by any chance? '
+      responseText: "Hmm\u2026 no, sorry. "
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 0
+    options:
+    - optionText: "Did it have a \u201CB\u201D logo on it? "
+      responseText: "Yeah yeah, now I remember it actually has a \u201CB\u201D logo! "
+      nextNode: 0
+    - optionText: 'Anything else you can tell me about it? '
+      responseText: 'Nah. Just your average wallet. '
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 1
+    options: []
+    dialogue: 'Good day. Maybe you can help me. I lost my wallet in the food court
+      a while back. Someone told me to come here and ask for it. '
+    nextNode: 0

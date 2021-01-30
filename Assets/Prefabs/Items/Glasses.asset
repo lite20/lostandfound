@@ -16,5 +16,6 @@ MonoBehaviour:
   small_image: {fileID: 21300000, guid: 3312e90784ac68640b0aafe446830c80, type: 3}
   description: "Lightweight sunglasses with a black frame. Looks expensive. No reason
     to use them inside, \u2018tho. "
-  ownerGraphs: []
+  ownerGraphs:
+  - {fileID: 11400000, guid: d0a2259e7758f2d4ea0c5ce5082b713c, type: 2}
   lierGraphs: []
