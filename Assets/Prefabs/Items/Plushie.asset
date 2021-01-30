@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3105c2441645ea440aac9a4a253d8f73, type: 3}
+  m_Name: Plushie
+  m_EditorClassIdentifier: 
+  description: A bear-like plushie with a crescent moon symbol on its forehead. Looks
+    clean and clearly well taken care of, perhaps brand new.
+  small_image: {fileID: 21300000, guid: 2236492aaeeaa074592893db19209280, type: 3}
+  big_image: {fileID: 21300000, guid: 8220b1eb0edf2b84fb3a0f1d6c106698, type: 3}
+  ownerGraphs:
+  - {fileID: 0}
+  lierGraphs:
+  - {fileID: 0}
