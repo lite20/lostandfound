@@ -72,11 +72,14 @@ public class GameController : MonoBehaviour
         dialogueController.SetArt(GetCharacter(m_roundIndex));
 
         // set the items
-        GameController.Sequence[] itemsThisRun = new GameController.Sequence[4];
-        for(int i = 0; i < 4; i++)
-            itemsThisRun[i] = m_sequence[i];
+        var itemsThisRun = new List<string>();
+        for(int i = 0; i < 5; i++) {
+            string name = m_sequence[i].item.name;
+            if (itemsThisRun.Contains(name)) continue;
+            else itemsThisRun.Add(name);
+        }
 
-        dialogueController.SetItems(itemsThisRun);
+        dialogueController.SetItems(itemsThisRun.ToArray());
 
         // toggle the panels
         selectionPanel.SetActive(false);
@@ -156,13 +159,11 @@ public class GameController : MonoBehaviour
         if (!m_sequence[m_roundIndex].isOwner) {
             btn.interactable = false;
             Give();
-        }
-        else {
+        } else {
             if (name == m_sequence[m_roundIndex].item.name) {
                 btn.interactable = false;
                 Give();
-            }
-            else WrongItem();
+            } else WrongItem();
         }
     }
 
@@ -187,7 +188,7 @@ public class GameController : MonoBehaviour
 
     public void GiveNothing() {
         onItemGive.Invoke();
-        
+
         // set rejection text
         endingTextUI.text = m_sequence[m_roundIndex].graph.rejectPhrase;
         
