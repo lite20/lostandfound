@@ -616,11 +616,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 11400000, guid: d306089ee37787e4cb5414f14ab9ae6b, type: 2}
+  - {fileID: 11400000, guid: 36847e9e54cc5d04d9d04c5436459729, type: 2}
+  - {fileID: 11400000, guid: ceacff560b942374680bfbe48d58dc1a, type: 2}
   - {fileID: 11400000, guid: 4bcb6a841e521c74b817d82b0ff13028, type: 2}
-  - {fileID: 11400000, guid: 463a5c2e39dd60341b48b94e8f9b760d, type: 2}
   - {fileID: 11400000, guid: f437c42eef0162b4cb79f3c1d1c97bc4, type: 2}
-  - {fileID: 11400000, guid: f612ff9760f249f45852561065423e3f, type: 2}
+  - {fileID: 11400000, guid: 04a83bf285094a34aaa7fdbf0f209e9e, type: 2}
+  - {fileID: 11400000, guid: d306089ee37787e4cb5414f14ab9ae6b, type: 2}
+  - {fileID: 11400000, guid: 463a5c2e39dd60341b48b94e8f9b760d, type: 2}
   itemPanelController: {fileID: 525869718}
   dialogueController: {fileID: 1264492157}
   selectionPanel: {fileID: 525869715}

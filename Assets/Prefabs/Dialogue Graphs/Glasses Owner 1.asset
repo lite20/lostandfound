@@ -21,14 +21,14 @@ MonoBehaviour:
       nextNode: 0
     - optionText: 'What kind of glasses? '
       responseText: "The kind you wear in your face\u2026 seriously, do you have
-        them or not? "
+        them or not?"
       nextNode: 0
     - optionText: 'Do you mean sunglasses? '
-      responseText: 'YES. Tomato, tomatoh. Can I have them now please thanks? '
+      responseText: YES. Tomato, tomatoh. Can I have them now?
       nextNode: 0
     dialogue: 
     nextNode: 0
   - isDialogue: 1
     options: []
-    dialogue: Hey, you. I lost my glasses. Do you have them?
+    dialogue: 'Hey, you. I lost my glasses. Do you have them? '
     nextNode: 0

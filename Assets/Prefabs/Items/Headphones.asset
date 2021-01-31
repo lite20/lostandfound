@@ -20,4 +20,5 @@ MonoBehaviour:
   name: Headphones
   ownerGraphs:
   - {fileID: 11400000, guid: 24112df7b6e78194a9c97741a24d5c5a, type: 2}
-  liarGraphs: []
+  liarGraphs:
+  - {fileID: 11400000, guid: 5a2c08341f2af474bb7526ea17391608, type: 2}

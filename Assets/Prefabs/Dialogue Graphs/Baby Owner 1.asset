@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2aba4a262570d4a9a431c72006ad25, type: 3}
+  m_Name: Baby Owner 1
+  m_EditorClassIdentifier: 
+  startingNode: 3
+  nodes:
+  - isDialogue: 0
+    options:
+    - optionText: "Tell me more about this \u201Cbaby\u201D of yours. "
+      responseText: "It\u2019s\u2026 you know, a baby. A super young person. Sorry,
+        I\u2019m very stressed. "
+      nextNode: 1
+    - optionText: "This is a highly delicate situation\u2026 "
+      responseText: "\u2026 I know. Sorry to put you in this spot.  "
+      nextNode: 0
+    - optionText: 'How can you possibly lose a baby?! '
+      responseText: "I know\u2026 my friend will kill me if she finds out. "
+      nextNode: 2
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 0
+    options:
+    - optionText: "That\u2019s ok, what else can you tell me about the baby? "
+      responseText: "Very young. Super calm. She\u2019s an angel, really. "
+      nextNode: 0
+    - optionText: 'Was she wearing a pink toque, by any chance? '
+      responseText: "Yes! I mean, I think so. She\u2019s wearing a white shirt with
+        some writings in it."
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 0
+    options:
+    - optionText: "Your\u2026 friend? "
+      responseText: "Yeah. A friend of mine had to run to a meeting, phone turned
+        off or on airplane mode, can\u2019t reach her. I was supposed to look after
+        her "
+      nextNode: 0
+    - optionText: 'Kill? '
+      responseText: "I mean, it\u2019s a manner of speech. Look, I\u2019m sorry,
+        ok? Can you please help me out? "
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 1
+    options: []
+    dialogue: "Oh my, just the person I was looking for! You see, I took my eyes
+      off her for just a minute and next thing I know she\u2019s nowhere to be seen.
+      Have you seen a baby? "
+    nextNode: 0

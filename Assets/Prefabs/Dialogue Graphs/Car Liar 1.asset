@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2aba4a262570d4a9a431c72006ad25, type: 3}
+  m_Name: Car Liar 1
+  m_EditorClassIdentifier: 
+  startingNode: 2
+  nodes:
+  - isDialogue: 0
+    options:
+    - optionText: "A blue car, you say? Are you sure it\u2019s not green? "
+      responseText: 'Nope, definitely blue. '
+      nextNode: 0
+    - optionText: 'That car of yours, what more can you tell me about it? '
+      responseText: "It\u2019s a regular city car\u2026 not an SUV or anything like
+        that. "
+      nextNode: 0
+    - optionText: 'Did it have any noteworthy marks? '
+      responseText: 'Nothing that comes to mind. '
+      nextNode: 1
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 0
+    options:
+    - optionText: "What about\u2026 when was it last washed? "
+      responseText: "I\u2019ve been busy\u2026 can\u2019t really remember the last
+        time I washed it. "
+      nextNode: 0
+    - optionText: 'Any dents or damage you can think of? '
+      responseText: 'You know, maybe some rust spots but nothing major. '
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 1
+    options: []
+    dialogue: "Hey, maybe you can help. I\u2019m looking for my blue car. "
+    nextNode: 0

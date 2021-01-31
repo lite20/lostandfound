@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3105c2441645ea440aac9a4a253d8f73, type: 3}
+  m_Name: Car
+  m_EditorClassIdentifier: 
+  bigImage: {fileID: 21300000, guid: 1a51137d714aa5c49813ca29261f55ea, type: 3}
+  smallImage: {fileID: 21300000, guid: 125aa96d5747cbd4d89155ecb0457420, type: 3}
+  ownerCharacters: []
+  liarCharacters: []
+  description: Vintage blue car. Tires are worn showing its fair share of travels
+    but very well taken care of. Very clean and not a dent or rust to be seen.
+  name: Car
+  ownerGraphs:
+  - {fileID: 11400000, guid: cb8e3a88e4d318c4fb53c7f5995c3818, type: 2}
+  liarGraphs:
+  - {fileID: 11400000, guid: 4bd355099185bc54ea9f9c0db7892bba, type: 2}

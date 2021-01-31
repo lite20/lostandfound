@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2aba4a262570d4a9a431c72006ad25, type: 3}
+  m_Name: Journals Liar 1
+  m_EditorClassIdentifier: 
+  startingNode: 2
+  nodes:
+  - isDialogue: 0
+    options:
+    - optionText: 'What can you tell me about the item? '
+      responseText: "It\u2026 is important, and like I\u2019ve said, valuable. "
+      nextNode: 1
+    - optionText: 'Is it an expensive item? '
+      responseText: "Priceless, to tell you the truth. Can\u2019t say much more than
+        that. I hope you can respect my privacy. "
+      nextNode: 0
+    - optionText: 'Do you usually carry it with you? '
+      responseText: "Yeah\u2026 big mistake taking my eyes off it. Hope they are
+        safe. Can you check if you have it, please? "
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 0
+    options:
+    - optionText: 'Does it happen to be a bundle of journals? '
+      responseText: 'Journals, yes! Do you have them? '
+      nextNode: 0
+    - optionText: 'In what state is the item? I mean, is it new, old..? '
+      responseText: 'It is very well taken care of, mind you! '
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 1
+    options: []
+    dialogue: "I\u2019m looking for something valuable that I lost recently. Maybe
+      you can help me. "
+    nextNode: 0

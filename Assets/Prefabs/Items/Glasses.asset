@@ -22,4 +22,5 @@ MonoBehaviour:
   name: Glasses
   ownerGraphs:
   - {fileID: 11400000, guid: d0a2259e7758f2d4ea0c5ce5082b713c, type: 2}
-  liarGraphs: []
+  liarGraphs:
+  - {fileID: 11400000, guid: bccf5b91761c6184fb55ab1eefe0f04c, type: 2}

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2aba4a262570d4a9a431c72006ad25, type: 3}
+  m_Name: Car Owner 1
+  m_EditorClassIdentifier: 
+  startingNode: 2
+  nodes:
+  - isDialogue: 0
+    options:
+    - optionText: "Your\u2026 baby? "
+      responseText: "My pride and joy. Can\u2019t believe I left it unattended for
+        that long. "
+      nextNode: 0
+    - optionText: 'Please help me paint a picture. Tell me more about it. '
+      responseText: "Oh, the experiences we had. She\u2019s been in my life for a
+        few years. "
+      nextNode: 1
+    - optionText: "We\u2019re not talking about an actual child, are we?"
+      responseText: "No no! I feel bad about losing MY baby, but can\u2019t imagine
+        losing an actual offspring."
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 0
+    options:
+    - optionText: "I\u2019m sorry to hear you\u2019ve lost it\u2026 must be a very
+        valuable\u2026 thing. "
+      responseText: "Yes! You can\u2019t put a price on it! "
+      nextNode: 0
+    - optionText: 'Anything particular that stands out about it? '
+      responseText: "It\u2019s beautiful and the sort of thing you can take pretty
+        much anywhere! "
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 1
+    options: []
+    dialogue: "You\u2026 I\u2026 please help. I\u2019ve lost my baby! "
+    nextNode: 0

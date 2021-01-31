@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
     public GameObject selectionPanel;
     public GameObject interrogationPanel;
 
-    public Sequence[] m_sequence = new Sequence[5];
+    public Sequence[] m_sequence = new Sequence[7];
 
     private int m_roundIndex = 0;
 
@@ -45,22 +45,22 @@ public class GameController : MonoBehaviour
     }
 
     private void BuildRun() {
-        // get the 7 items for this run (5 for now)
-        int[] m_runItems = GetRunItems(5).ToArray();
+        // get the 7 items for these runs
+        int[] m_runItems = GetRunItems(7).ToArray();
         
-        // the item indexes
-        List<int> indexes = new List<int>(){ 0, 1, 2, 3 };
+        // the indexes for the items from this run
+        List<int> runIndexes = new List<int>(){ 0, 1, 2, 3 };
 
         // select the item that is duplicated
-        int duplicateIndex = Random.Range(0, indexes.Count);
-        int duplicate = indexes[duplicateIndex];
-        indexes.RemoveAt(duplicateIndex);
+        int duplicateIndex = Random.Range(0, runIndexes.Count);
+        int duplicate = runIndexes[duplicateIndex];
+        runIndexes.RemoveAt(duplicateIndex);
 
-        // pick the indexes for the duplicate pair
+        // pick the runIndexes for the duplicate pair
         int dLieIndex = Random.Range(0, 2);
         int dTruthIndex = dLieIndex + Random.Range(1, 3);
 
-        // create the run
+        // create the first run
         for (int i = 0; i < 5; i++) {
             Sequence sequence = new Sequence();
 
@@ -72,9 +72,9 @@ public class GameController : MonoBehaviour
                 sequence.isOwner = true;
             } else {
                 // pick an item
-                int index = Random.Range(0, indexes.Count);
-                int value = indexes[index];
-                indexes.RemoveAt(index);
+                int index = Random.Range(0, runIndexes.Count);
+                int value = runIndexes[index];
+                runIndexes.RemoveAt(index);
 
                 // create the sequence
                 sequence.item = items[m_runItems[value]];

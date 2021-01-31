@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2aba4a262570d4a9a431c72006ad25, type: 3}
+  m_Name: Journals Owner 1
+  m_EditorClassIdentifier: 
+  startingNode: 2
+  nodes:
+  - isDialogue: 0
+    options:
+    - optionText: 'What can you tell me about the item? '
+      responseText: "Like I\u2019ve said, it\u2019s very personal. Hope no one else
+        has used it since I last had them. "
+      nextNode: 1
+    - optionText: 'Is it an expensive item? '
+      responseText: "Yes and no\u2026 well, it would take a lot of time to get a
+        replacement, that\u2019s for sure. I guess you can call me old school. "
+      nextNode: 0
+    - optionText: 'Do you usually carry it with you? '
+      responseText: 'Actually, yeah. It comes in handy depending on the activities
+        I have planned for the day. '
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 0
+    options:
+    - optionText: "\u2026 used them? "
+      responseText: 'Yeah. Very personal. I feel grossed out simply imagining someone
+        else touching them. '
+      nextNode: 0
+    - optionText: 'How personal? '
+      responseText: "The kind of thing you should probably not lend to anyone, especially
+        strangers. I\u2019m very particular about my stuff and I don\u2019t even
+        trust computers to keep important information that I might need in the future. "
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 1
+    options: []
+    dialogue: "Hey, listen\u2026 I\u2019ve lost something very personal. I\u2019ve
+      heard you might have it. "
+    nextNode: 0

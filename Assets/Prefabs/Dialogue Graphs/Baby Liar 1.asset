@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2aba4a262570d4a9a431c72006ad25, type: 3}
+  m_Name: Baby Liar 1
+  m_EditorClassIdentifier: 
+  startingNode: 3
+  nodes:
+  - isDialogue: 0
+    options:
+    - optionText: "Tell me more about this \u201Ckid\u201D of yours. "
+      responseText: "Kids are angels. A true joy\u2026 except when they run away.
+        Look, is this really necessary? How often does someone come here looking
+        for their missing child? "
+      nextNode: 1
+    - optionText: "This is a highly delicate situation\u2026 "
+      responseText: "Of course it is! A child lost and scared in a big mall like
+        this\u2026 let\u2019s not prolong this situation any longer. "
+      nextNode: 2
+    - optionText: 'How can you possibly lose a kid?! '
+      responseText: "Hey, I know I\u2019m not perfect\u2026 but they do have legs,
+        you know? "
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 0
+    options:
+    - optionText: "Unfortunately it is.I can\u2019t simply hand out kids to strangers! "
+      responseText: "I\u2019m no stranger, mind you. Here is my ID, you can even
+        see the resemblance\u2026 "
+      nextNode: 0
+    - optionText: 'Not very often, I admit. '
+      responseText: 'So there you go. Do you have my angel or not? '
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 0
+    options:
+    - optionText: 'Sorry, but I still need a little more information. '
+      responseText: "Ok, let\u2019s see\u2026 very cute, big appetite, clean clothes. "
+      nextNode: 0
+    - optionText: "I have an idea. Tell me the boy\u2019s name and I\u2019ll call
+        for it, see if he responds. "
+      responseText: 'Oh, sure. His name is Jonathan. '
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 1
+    options: []
+    dialogue: "I\u2019ve been looking everywhere. The mall security directed me to
+      this location. Is my kid under your care?"
+    nextNode: 0

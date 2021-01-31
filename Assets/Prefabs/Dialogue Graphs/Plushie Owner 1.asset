@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2aba4a262570d4a9a431c72006ad25, type: 3}
+  m_Name: Plushie Owner 1
+  m_EditorClassIdentifier: 
+  startingNode: 1
+  nodes:
+  - isDialogue: 0
+    options:
+    - optionText: 'Where did you see it last? '
+      responseText: "I was at the food court and had to go to the washroom\u2026
+        when I came back it was gone! "
+      nextNode: 0
+    - optionText: "Do you happen to have the item\u2019s receipt? "
+      responseText: "I don\u2019t. But I can explain! It was a gift. "
+      nextNode: 0
+    - optionText: 'What can you tell me about the item? '
+      responseText: "It\u2019s the plushie of a fire-breathing bear from a game I
+        love! Please tell me you have it. "
+      nextNode: 0
+    dialogue: 
+    nextNode: 0
+  - isDialogue: 1
+    options: []
+    dialogue: 'Please please please tell me you got my plushie back there somewhere! '
+    nextNode: 0
