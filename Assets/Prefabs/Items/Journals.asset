@@ -14,8 +14,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bigImage: {fileID: 21300000, guid: 1c5e7118a57a7064e99c56c990be2f1e, type: 3}
   smallImage: {fileID: 21300000, guid: 712695a9255d3e0419e54889531760e5, type: 3}
-  ownerCharacters: []
-  liarCharacters: []
+  ownerCharacters:
+  - {fileID: 21300000, guid: 859e36e5ae930ee47839fc3cad98be0a, type: 3}
+  - {fileID: 21300000, guid: 8c29b91c4ecee3245b25f64b99584be9, type: 3}
+  - {fileID: 21300000, guid: 79f22ec2f7658c548b452cf868e22374, type: 3}
+  - {fileID: 21300000, guid: 4f36af48ee0c903438f7f5f9298606a1, type: 3}
+  - {fileID: 21300000, guid: 231f7bbfc7993cd46a39344825fa96f3, type: 3}
+  - {fileID: 21300000, guid: 5e9cbff87496b3c45941dfad0d59d9f1, type: 3}
+  - {fileID: 21300000, guid: b01b4913b6e9c2a479f1a4eec417e293, type: 3}
+  - {fileID: 21300000, guid: bff74bcb9ba18bc4bafd04c7fad3cd26, type: 3}
+  - {fileID: 21300000, guid: 62ba63d526600c24eb24ac809ffb9800, type: 3}
+  - {fileID: 21300000, guid: dd8c27f1733060e48aa70e24159d7971, type: 3}
+  - {fileID: 21300000, guid: be7899d2444fcff4ea61a70986bfe114, type: 3}
+  - {fileID: 21300000, guid: d278d58cf32ec914493af13a0b427f42, type: 3}
+  - {fileID: 21300000, guid: 2c8705ee15ca8c446a5c6f38362ee1b7, type: 3}
+  - {fileID: 21300000, guid: bfe0cf17a67a57845853486a55bda641, type: 3}
+  - {fileID: 21300000, guid: a133d27373ade3e4a973df0962887c95, type: 3}
+  - {fileID: 21300000, guid: ac39e9c40d567564fba82c5e30d1e94b, type: 3}
+  liarCharacters:
+  - {fileID: 21300000, guid: 859e36e5ae930ee47839fc3cad98be0a, type: 3}
+  - {fileID: 21300000, guid: 8c29b91c4ecee3245b25f64b99584be9, type: 3}
+  - {fileID: 21300000, guid: 79f22ec2f7658c548b452cf868e22374, type: 3}
+  - {fileID: 21300000, guid: 4f36af48ee0c903438f7f5f9298606a1, type: 3}
+  - {fileID: 21300000, guid: 231f7bbfc7993cd46a39344825fa96f3, type: 3}
+  - {fileID: 21300000, guid: 5e9cbff87496b3c45941dfad0d59d9f1, type: 3}
+  - {fileID: 21300000, guid: b01b4913b6e9c2a479f1a4eec417e293, type: 3}
+  - {fileID: 21300000, guid: bff74bcb9ba18bc4bafd04c7fad3cd26, type: 3}
+  - {fileID: 21300000, guid: 62ba63d526600c24eb24ac809ffb9800, type: 3}
+  - {fileID: 21300000, guid: dd8c27f1733060e48aa70e24159d7971, type: 3}
+  - {fileID: 21300000, guid: be7899d2444fcff4ea61a70986bfe114, type: 3}
+  - {fileID: 21300000, guid: d278d58cf32ec914493af13a0b427f42, type: 3}
+  - {fileID: 21300000, guid: 2c8705ee15ca8c446a5c6f38362ee1b7, type: 3}
+  - {fileID: 21300000, guid: bfe0cf17a67a57845853486a55bda641, type: 3}
+  - {fileID: 21300000, guid: a133d27373ade3e4a973df0962887c95, type: 3}
+  - {fileID: 21300000, guid: ac39e9c40d567564fba82c5e30d1e94b, type: 3}
   description: "A collection of diaries or maybe travel journals, possibly containing
     someone\u2019s deep dark secrets. Well worn from usage and carrying it around. "
   name: Journals
