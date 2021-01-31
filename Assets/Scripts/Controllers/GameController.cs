@@ -23,9 +23,11 @@ public class GameController : MonoBehaviour
 
     public ItemPanelController itemPanelController;
     public DialogueController dialogueController;
+    public ResultsController resultsController;
 
     public GameObject selectionPanel;
     public GameObject interrogationPanel;
+    public GameObject resultsPanel;
     public GameObject endingPanel;
     public GameObject decisionButton;
     public GameObject closeDecisionButton;
@@ -88,14 +90,21 @@ public class GameController : MonoBehaviour
     
     // proceeds to the next round
     public void Proceed() {
+        decisionButton.SetActive(true);
+
+        if (m_roundIndex == 4) {
+            interrogationPanel.SetActive(false);
+            resultsPanel.SetActive(true);
+
+            return;
+        }
+
         m_roundIndex++;
 
         DialogueGraph graph = GetSequenceGraph(m_roundIndex);
         m_sequence[m_roundIndex].graph = graph;
         dialogueController.RunGraph(graph);
         dialogueController.SetArt(GetCharacter(m_roundIndex));
-
-        decisionButton.SetActive(true);
     }
 
     private void BuildRun() {
@@ -157,17 +166,27 @@ public class GameController : MonoBehaviour
     public void TryGive(string name, Button btn) {
         closeDecisionButton.SetActive(false);
         if (!m_sequence[m_roundIndex].isOwner) {
-            btn.interactable = false;
-            Give();
+            // give the item
+            Give(btn);
+
+            // add to results as incorrect
+            resultsController.AddResult(name, false);
         } else {
             if (name == m_sequence[m_roundIndex].item.name) {
-                btn.interactable = false;
-                Give();
+                // give the item
+                Give(btn);
+
+                // add to results as correct
+                resultsController.AddResult(name, true);
             } else WrongItem();
         }
     }
 
-    private void Give() {
+    private void Give(Button btn) {
+        // disable button
+        btn.interactable = false;
+
+        // invoke event
         onItemGive.Invoke();
 
         // set confirmation text
@@ -187,6 +206,14 @@ public class GameController : MonoBehaviour
     }
 
     public void GiveNothing() {
+        // add to results as incorrect
+        if (m_sequence[m_roundIndex].isOwner)
+            resultsController.AddResult(m_sequence[m_roundIndex].item.name, false);
+        
+        // add to results as correct
+        else resultsController.AddResult(m_sequence[m_roundIndex].item.name, true);
+        
+        // invoke event
         onItemGive.Invoke();
 
         // set rejection text
