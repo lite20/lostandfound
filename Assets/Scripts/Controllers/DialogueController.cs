@@ -59,6 +59,7 @@ public class DialogueController : MonoBehaviour
         // set the response node next node
         dialoguePanel.Show(true);
         optionPanel.Show(false);
+        Debug.Log("Killed");
     }
 
     public void SetArt(Sprite character) {

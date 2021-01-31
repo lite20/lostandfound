@@ -45,6 +45,7 @@ public class OptionPanel : MonoBehaviour
     }
 
     public void Advance(int node, string response, int offset) {
+        Debug.Log("Special advance");
         controller.RespondThenAdvance(node, response, offset);
     }
 
