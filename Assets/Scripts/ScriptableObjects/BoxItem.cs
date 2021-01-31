@@ -13,7 +13,7 @@ public class BoxItem : ScriptableObject
     public Sprite[] liarCharacters;
 
     public string description;
-    public string iName;
+    public string name;
 
     public DialogueGraph[] ownerGraphs;
     public DialogueGraph[] liarGraphs;

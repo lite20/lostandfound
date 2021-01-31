@@ -76,9 +76,9 @@ public class GameController : MonoBehaviour
         // set the items
         var itemsThisRun = new List<string>();
         for(int i = 0; i < 5; i++) {
-            string iName = m_sequence[i].item.iName;
-            if (itemsThisRun.Contains(iName)) continue;
-            else itemsThisRun.Add(iName);
+            string name = m_sequence[i].item.name;
+            if (itemsThisRun.Contains(name)) continue;
+            else itemsThisRun.Add(name);
         }
 
         dialogueController.SetItems(itemsThisRun.ToArray());
@@ -163,21 +163,21 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void TryGive(string iName, Button btn) {
+    public void TryGive(string name, Button btn) {
         closeDecisionButton.SetActive(false);
         if (!m_sequence[m_roundIndex].isOwner) {
             // give the item
             Give(btn);
 
             // add to results as incorrect
-            resultsController.AddResult(iName, false);
+            resultsController.AddResult(name, false);
         } else {
-            if (iName == m_sequence[m_roundIndex].item.iName) {
+            if (name == m_sequence[m_roundIndex].item.name) {
                 // give the item
                 Give(btn);
 
                 // add to results as correct
-                resultsController.AddResult(iName, true);
+                resultsController.AddResult(name, true);
             } else WrongItem();
         }
     }
@@ -208,10 +208,10 @@ public class GameController : MonoBehaviour
     public void GiveNothing() {
         // add to results as incorrect
         if (m_sequence[m_roundIndex].isOwner)
-            resultsController.AddResult(m_sequence[m_roundIndex].item.iName, false);
+            resultsController.AddResult(m_sequence[m_roundIndex].item.name, false);
         
         // add to results as correct
-        else resultsController.AddResult(m_sequence[m_roundIndex].item.iName, true);
+        else resultsController.AddResult(m_sequence[m_roundIndex].item.name, true);
         
         // invoke event
         onItemGive.Invoke();

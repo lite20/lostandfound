@@ -23,18 +23,18 @@ public class ResultsController : MonoBehaviour
         resultsText.text = "Today's Report: " + score;
     }
 
-    public void AddResult(string iName, bool correct) {
+    public void AddResult(string name, bool correct) {
         if (!correct) made_mistakes = true;
 
         // dont allow double entries. (they'd be the same, anyway)
-        if (m_markedResults.Contains(iName)) return;
-        m_markedResults.Add(iName);
+        if (m_markedResults.Contains(name)) return;
+        m_markedResults.Add(name);
 
         var go = Instantiate(resultPrefab, resultContainer.transform);
         var text = go.transform.GetChild(0).GetComponent<Text>();
         var image = go.transform.GetChild(1).GetComponent<Image>();
 
-        text.text = iName;
+        text.text = name;
         image.sprite = correct ? correctSprite : incorrectSprite;
     }
 
