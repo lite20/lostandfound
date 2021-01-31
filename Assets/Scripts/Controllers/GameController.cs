@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,6 +24,8 @@ public class GameController : MonoBehaviour
 
     private int m_roundIndex = 0;
 
+    private int[] m_runItems;
+
     private List<int> GetRunItems(int numberOfItems) {
         List<int> runItems = new List<int>();
 
@@ -32,7 +35,7 @@ public class GameController : MonoBehaviour
 
         // generate list of items for this run
         for (int i = 0; i < numberOfItems; i++) {
-            int index = Random.Range(0, itemIndexes.Count);
+            int index = UnityEngine.Random.Range(0, itemIndexes.Count);
             runItems.Add(itemIndexes[index]);
             itemIndexes.RemoveAt(index);
         }
@@ -46,19 +49,19 @@ public class GameController : MonoBehaviour
 
     private void BuildRun() {
         // get the 7 items for these runs
-        int[] m_runItems = GetRunItems(7).ToArray();
+        m_runItems = GetRunItems(7).ToArray();
         
         // the indexes for the items from this run
         List<int> runIndexes = new List<int>(){ 0, 1, 2, 3 };
 
         // select the item that is duplicated
-        int duplicateIndex = Random.Range(0, runIndexes.Count);
+        int duplicateIndex = UnityEngine.Random.Range(0, runIndexes.Count);
         int duplicate = runIndexes[duplicateIndex];
         runIndexes.RemoveAt(duplicateIndex);
 
         // pick the runIndexes for the duplicate pair
-        int dLieIndex = Random.Range(0, 2);
-        int dTruthIndex = dLieIndex + Random.Range(1, 3);
+        int dLieIndex = UnityEngine.Random.Range(0, 2);
+        int dTruthIndex = dLieIndex + UnityEngine.Random.Range(1, 3);
 
         // create the first run
         for (int i = 0; i < 5; i++) {
@@ -72,7 +75,7 @@ public class GameController : MonoBehaviour
                 sequence.isOwner = true;
             } else {
                 // pick an item
-                int index = Random.Range(0, runIndexes.Count);
+                int index = UnityEngine.Random.Range(0, runIndexes.Count);
                 int value = runIndexes[index];
                 runIndexes.RemoveAt(index);
 
@@ -85,9 +88,9 @@ public class GameController : MonoBehaviour
         }
 
         // flip one truth to be a lie
-        int flipIndex = Random.Range(0, 5);
+        int flipIndex = UnityEngine.Random.Range(0, 5);
         while (flipIndex == dLieIndex || flipIndex == dTruthIndex)
-            flipIndex = Random.Range(0, 5);
+            flipIndex = UnityEngine.Random.Range(0, 5);
         
         m_sequence[flipIndex].isOwner = false;
 
@@ -112,9 +115,18 @@ public class GameController : MonoBehaviour
     public void Begin() {
         m_roundIndex = 0;
 
+        // create graphs and set them
         dialogueController.RunGraph(GetSequenceGraph(m_roundIndex));
         dialogueController.SetArt(GetCharacter(m_roundIndex));
 
+        // set the items
+        BoxItem[] itemsThisRun = new BoxItem[4];
+        for(int i = 0; i < 4; i++)
+            itemsThisRun[i] = m_sequence[i].item;
+        
+        dialogueController.SetItems(itemsThisRun);
+
+        // toggle the panels
         selectionPanel.SetActive(false);
         interrogationPanel.SetActive(true);
     }
@@ -129,7 +141,7 @@ public class GameController : MonoBehaviour
         else graphs = seq.item.liarGraphs;
 
         // pick one and return
-        return graphs[Random.Range(0, graphs.Length)];
+        return graphs[UnityEngine.Random.Range(0, graphs.Length)];
     }
 
     // gets a person art for the sequence item requested
@@ -142,6 +154,6 @@ public class GameController : MonoBehaviour
         else characters = seq.item.liarCharacters;
 
         // pick a character and return
-        return characters[Random.Range(0, characters.Length)];
+        return characters[UnityEngine.Random.Range(0, characters.Length)];
     }
 }

@@ -11,6 +11,10 @@ public class DialogueController : MonoBehaviour
 
     public DialogueGraph m_graph;
 
+    public GameObject decisionContainer;
+
+    public GameObject decisionItemPrefab;
+
     public Image characterImage;
 
     public void RunGraph(DialogueGraph graph) {
@@ -43,5 +47,13 @@ public class DialogueController : MonoBehaviour
 
     public void SetArt(Sprite character) {
         characterImage.sprite = character;
+    }
+
+    public void SetItems(BoxItem[] items) {
+        foreach (BoxItem item in items) {
+            GameObject go = Instantiate(
+                decisionItemPrefab, decisionContainer.transform);
+            go.transform.GetChild(0).GetComponent<Text>().text = item.name;
+        }
     }
 }
