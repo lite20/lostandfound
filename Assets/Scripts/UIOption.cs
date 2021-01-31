@@ -8,12 +8,13 @@ public class UIOption : MonoBehaviour
     public Text buttonText;
 
     public int nextNode;
+    public int offset;
 
     public string response;
 
     public OptionPanel optionPanel;
 
     public void Advance() {
-        optionPanel.Advance(nextNode, response);
+        optionPanel.Advance(nextNode, response, offset);
     }
 }

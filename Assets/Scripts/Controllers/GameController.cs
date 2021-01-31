@@ -76,9 +76,9 @@ public class GameController : MonoBehaviour
         // set the items
         var itemsThisRun = new List<string>();
         for(int i = 0; i < 5; i++) {
-            string name = m_sequence[i].item.name;
-            if (itemsThisRun.Contains(name)) continue;
-            else itemsThisRun.Add(name);
+            string iName = m_sequence[i].item.iName;
+            if (itemsThisRun.Contains(iName)) continue;
+            else itemsThisRun.Add(iName);
         }
 
         dialogueController.SetItems(itemsThisRun.ToArray());
@@ -163,21 +163,21 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void TryGive(string name, Button btn) {
+    public void TryGive(string iName, Button btn) {
         closeDecisionButton.SetActive(false);
         if (!m_sequence[m_roundIndex].isOwner) {
             // give the item
             Give(btn);
 
             // add to results as incorrect
-            resultsController.AddResult(name, false);
+            resultsController.AddResult(iName, false);
         } else {
-            if (name == m_sequence[m_roundIndex].item.name) {
+            if (iName == m_sequence[m_roundIndex].item.iName) {
                 // give the item
                 Give(btn);
 
                 // add to results as correct
-                resultsController.AddResult(name, true);
+                resultsController.AddResult(iName, true);
             } else WrongItem();
         }
     }
@@ -201,17 +201,17 @@ public class GameController : MonoBehaviour
 
         // show wrong item text
         dialogueController.RespondThenAdvance(
-            0, "No, that's not it!"
+            0, "No, that's not it!", -1
         );
     }
 
     public void GiveNothing() {
         // add to results as incorrect
         if (m_sequence[m_roundIndex].isOwner)
-            resultsController.AddResult(m_sequence[m_roundIndex].item.name, false);
+            resultsController.AddResult(m_sequence[m_roundIndex].item.iName, false);
         
         // add to results as correct
-        else resultsController.AddResult(m_sequence[m_roundIndex].item.name, true);
+        else resultsController.AddResult(m_sequence[m_roundIndex].item.iName, true);
         
         // invoke event
         onItemGive.Invoke();

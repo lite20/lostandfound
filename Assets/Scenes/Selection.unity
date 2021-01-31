@@ -657,6 +657,7 @@ MonoBehaviour:
   correctSprite: {fileID: 21300000, guid: 27d9ed4e68c4ffb4bb4f2a1068c1fef4, type: 3}
   incorrectSprite: {fileID: 21300000, guid: d638bcf7ac9fb14429c8fcf050e8ab68, type: 3}
   resultsText: {fileID: 321029454}
+  made_mistakes: 0
 --- !u!114 &312072151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -739,7 +740,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Today''s Results:'
+  m_Text: 'Today''s Report:'
 --- !u!222 &321029455
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1018,8 +1019,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 167.5, y: 0}
+  m_SizeDelta: {x: 303, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &467366649
 MonoBehaviour:
@@ -4380,7 +4381,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Continue
+  m_Text: 'Finish
+
+'
 --- !u!222 &1906655898
 CanvasRenderer:
   m_ObjectHideFlags: 0

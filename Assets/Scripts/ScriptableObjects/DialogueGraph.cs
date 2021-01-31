@@ -9,7 +9,7 @@ public class DialogueGraph : ScriptableObject
     public struct Option {
         public string optionText;
         public string responseText;
-        
+
         public int nextNode;
     }
 
