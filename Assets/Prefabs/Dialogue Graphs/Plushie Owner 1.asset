@@ -33,3 +33,7 @@ MonoBehaviour:
     options: []
     dialogue: 'Please please please tell me you got my plushie back there somewhere! '
     nextNode: 0
+  givePhrase: "That\u2019s amazing! I\u2019m so lucky! Thank you, thank you, thank
+    you! "
+  rejectPhrase: "That\u2019s\u2026 sad. I guess it\u2019s my fault for not taking
+    better care of it... "

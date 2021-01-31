@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class GameController : MonoBehaviour
 {
@@ -10,7 +12,12 @@ public class GameController : MonoBehaviour
         public BoxItem item;
 
         public bool isOwner;
+
+        public DialogueGraph graph;
     }
+
+    public UnityEvent onWrongItem;
+    public UnityEvent onItemGive;
 
     public BoxItem[] items;
 
@@ -19,6 +26,11 @@ public class GameController : MonoBehaviour
 
     public GameObject selectionPanel;
     public GameObject interrogationPanel;
+    public GameObject endingPanel;
+    public GameObject decisionButton;
+    public GameObject closeDecisionButton;
+
+    public Text endingTextUI;
 
     public Sequence[] m_sequence = new Sequence[7];
 
@@ -44,7 +56,43 @@ public class GameController : MonoBehaviour
     }
 
     public void Start() {
+        if (onWrongItem == null) onWrongItem = new UnityEvent();
+        if (onItemGive == null) onItemGive = new UnityEvent();
         BuildRun();
+    }
+
+    // starts the game
+    public void Begin() {
+        m_roundIndex = 0;
+
+        // create graphs and set them
+        DialogueGraph graph = GetSequenceGraph(m_roundIndex);
+        m_sequence[m_roundIndex].graph = graph;
+        dialogueController.RunGraph(graph);
+        dialogueController.SetArt(GetCharacter(m_roundIndex));
+
+        // set the items
+        GameController.Sequence[] itemsThisRun = new GameController.Sequence[4];
+        for(int i = 0; i < 4; i++)
+            itemsThisRun[i] = m_sequence[i];
+
+        dialogueController.SetItems(itemsThisRun);
+
+        // toggle the panels
+        selectionPanel.SetActive(false);
+        interrogationPanel.SetActive(true);
+    }
+    
+    // proceeds to the next round
+    public void Proceed() {
+        m_roundIndex++;
+
+        DialogueGraph graph = GetSequenceGraph(m_roundIndex);
+        m_sequence[m_roundIndex].graph = graph;
+        dialogueController.RunGraph(graph);
+        dialogueController.SetArt(GetCharacter(m_roundIndex));
+
+        decisionButton.SetActive(true);
     }
 
     private void BuildRun() {
@@ -103,32 +151,48 @@ public class GameController : MonoBehaviour
         }
     }
 
-    // proceeds to the next round
-    public void Proceed() {
-        m_roundIndex++;
-
-        dialogueController.RunGraph(GetSequenceGraph(m_roundIndex));
-        dialogueController.SetArt(GetCharacter(m_roundIndex));
+    public void TryGive(string name, Button btn) {
+        closeDecisionButton.SetActive(false);
+        if (!m_sequence[m_roundIndex].isOwner) {
+            btn.interactable = false;
+            Give();
+        }
+        else {
+            if (name == m_sequence[m_roundIndex].item.name) {
+                btn.interactable = false;
+                Give();
+            }
+            else WrongItem();
+        }
     }
 
-    // starts the game
-    public void Begin() {
-        m_roundIndex = 0;
+    private void Give() {
+        onItemGive.Invoke();
 
-        // create graphs and set them
-        dialogueController.RunGraph(GetSequenceGraph(m_roundIndex));
-        dialogueController.SetArt(GetCharacter(m_roundIndex));
+        // set confirmation text
+        endingTextUI.text = m_sequence[m_roundIndex].graph.givePhrase;
 
-        // set the items
-        BoxItem[] itemsThisRun = new BoxItem[4];
-        for(int i = 0; i < 4; i++)
-            itemsThisRun[i] = m_sequence[i].item;
+        // show confirmation panel
+        endingPanel.SetActive(true);
+    }
+
+    private void WrongItem() {
+        onWrongItem.Invoke();
+
+        // show wrong item text
+        dialogueController.RespondThenAdvance(
+            0, "No, that's not it!"
+        );
+    }
+
+    public void GiveNothing() {
+        onItemGive.Invoke();
         
-        dialogueController.SetItems(itemsThisRun);
-
-        // toggle the panels
-        selectionPanel.SetActive(false);
-        interrogationPanel.SetActive(true);
+        // set rejection text
+        endingTextUI.text = m_sequence[m_roundIndex].graph.rejectPhrase;
+        
+        // show rejection panel
+        endingPanel.SetActive(true);
     }
 
     // gets a graph for the sequence item requested

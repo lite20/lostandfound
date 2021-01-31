@@ -44,3 +44,5 @@ MonoBehaviour:
     dialogue: "I\u2019m looking for something valuable that I lost recently. Maybe
       you can help me. "
     nextNode: 0
+  givePhrase: "That\u2019s\u2026 this is it! Thank you very much. "
+  rejectPhrase: "Are you certain? I\u2019ll keep looking then. "

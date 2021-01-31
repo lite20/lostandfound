@@ -42,3 +42,6 @@ MonoBehaviour:
     dialogue: "Good day. I\u2019ve heard this is the place one should come when they
       lost a personal possession. "
     nextNode: 0
+  givePhrase: 'Ding ding ding. Have yourself a fine day. '
+  rejectPhrase: "That\u2019s a shame.. well, worth the try. Have yourself a fine
+    day. "

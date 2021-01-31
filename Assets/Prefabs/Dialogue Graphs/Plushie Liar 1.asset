@@ -49,3 +49,5 @@ MonoBehaviour:
       the size of a basketball. It\u2019s very expensive. Can\u2019t believe I\u2019ve
       lost it right after leaving the store. "
     nextNode: 0
+  givePhrase: 'Yes... good! Thank you. '
+  rejectPhrase: "My nephew will be very sad\u2026 "

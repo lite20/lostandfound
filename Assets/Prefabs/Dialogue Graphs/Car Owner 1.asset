@@ -46,3 +46,5 @@ MonoBehaviour:
     options: []
     dialogue: "You\u2026 I\u2026 please help. I\u2019ve lost my baby! "
     nextNode: 0
+  givePhrase: 'My baby! Thank you so much! '
+  rejectPhrase: "My heart is broken. I\u2019ll come back later to check again. "

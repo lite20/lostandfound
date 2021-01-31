@@ -47,3 +47,5 @@ MonoBehaviour:
     dialogue: "Hey. Sorry. Excuse me. I\u2019m in a hurry. Did anyone find that thing,
       y\u2019know\u2026 that you wear?"
     nextNode: 0
+  givePhrase: 'Thanks. '
+  rejectPhrase: 'Well that was a waste of time... '

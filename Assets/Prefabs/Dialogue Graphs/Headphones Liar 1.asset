@@ -41,3 +41,5 @@ MonoBehaviour:
     dialogue: "Hey. I\u2019ve heard someone found my accessory. Can I have it back,
       please? "
     nextNode: 0
+  givePhrase: "Perfect\u2026 just what I was looking for. "
+  rejectPhrase: "You sure? That\u2019s a bummer. "

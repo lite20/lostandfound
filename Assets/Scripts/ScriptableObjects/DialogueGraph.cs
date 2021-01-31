@@ -27,4 +27,7 @@ public class DialogueGraph : ScriptableObject
     public int startingNode = 0;
 
     public Node[] nodes;
+
+    public string givePhrase;
+    public string rejectPhrase;
 }

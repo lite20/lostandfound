@@ -48,3 +48,7 @@ MonoBehaviour:
     dialogue: "Hey, listen\u2026 I\u2019ve lost something very personal. I\u2019ve
       heard you might have it. "
     nextNode: 0
+  givePhrase: "YES! Thank you. Hope you haven\u2019t peeked inside. Like I\u2019ve
+    said, very personal. "
+  rejectPhrase: "Darn it! I hope it\u2019s safe somewhere else then. Please set it
+    aside if you happen to find it. "

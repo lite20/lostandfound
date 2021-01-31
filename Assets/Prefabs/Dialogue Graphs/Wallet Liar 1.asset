@@ -42,3 +42,5 @@ MonoBehaviour:
     dialogue: 'Good day. Maybe you can help me. I lost my wallet in the food court
       a while back. Someone told me to come here and ask for it. '
     nextNode: 0
+  givePhrase: "That\u2019s the one! My trusty wallet. Thanks. "
+  rejectPhrase: "Are you sure there\u2019s no wallet back there? Oh well, ok. "

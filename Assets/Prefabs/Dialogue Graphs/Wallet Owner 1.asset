@@ -41,3 +41,6 @@ MonoBehaviour:
     options: []
     dialogue: "Hello, I\u2019ve lost my wallet. Do you have it by any chance?"
     nextNode: 0
+  givePhrase: "That\u2019s great. I\u2019m so forgetful these days\u2026 thanks a
+    lot! "
+  rejectPhrase: 'Well, it was worth a shot. Thanks anyway. '

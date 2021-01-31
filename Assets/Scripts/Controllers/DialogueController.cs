@@ -49,11 +49,18 @@ public class DialogueController : MonoBehaviour
         characterImage.sprite = character;
     }
 
-    public void SetItems(BoxItem[] items) {
-        foreach (BoxItem item in items) {
-            GameObject go = Instantiate(
+    public void SetItems(GameController.Sequence[] items) {
+        foreach (GameController.Sequence item in items) {
+            GameObject btn = Instantiate(
                 decisionItemPrefab, decisionContainer.transform);
-            go.transform.GetChild(0).GetComponent<Text>().text = item.name;
+
+            btn.transform.GetChild(0).GetComponent<Text>().text = item.item.name;
+            Button btnObj = btn.GetComponent<Button>();
+            btnObj.onClick.AddListener(delegate {
+                GameObject go = GameObject.Find("GameController");
+                GameController gc = go.GetComponent<GameController>();
+                gc.TryGive(item.item.name, btnObj);
+            });
         }
     }
 }

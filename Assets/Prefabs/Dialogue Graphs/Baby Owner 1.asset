@@ -58,3 +58,7 @@ MonoBehaviour:
       off her for just a minute and next thing I know she\u2019s nowhere to be seen.
       Have you seen a baby? "
     nextNode: 0
+  givePhrase: "Thank you! Listen, I know what you did wasn\u2019t easy. I\u2019ll
+    stick around this area waiting for my friend. I\u2019ll come clean when she arrives."
+  rejectPhrase: "What am I gonna do?! My friend is going to kill me\u2026 maybe I
+    should call the police... "

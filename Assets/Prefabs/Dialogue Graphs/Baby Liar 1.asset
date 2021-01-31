@@ -58,3 +58,7 @@ MonoBehaviour:
     dialogue: "I\u2019ve been looking everywhere. The mall security directed me to
       this location. Is my kid under your care?"
     nextNode: 0
+  givePhrase: "I\u2019ve missed you sooo muuuch! Here, let\u2019s go home. Thank
+    you. "
+  rejectPhrase: "This is absurd. I\u2019m going to the cops! You can\u2019t keep
+    me from my child! "

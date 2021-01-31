@@ -43,3 +43,5 @@ MonoBehaviour:
     options: []
     dialogue: "Hey, maybe you can help. I\u2019m looking for my blue car. "
     nextNode: 0
+  givePhrase: "That\u2019s great news, thanks! "
+  rejectPhrase: 'Are you sure? Well, ok. '
